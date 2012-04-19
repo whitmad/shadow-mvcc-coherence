@@ -2,10 +2,8 @@
 
 = Configuration =
 
-To use Shadow MVCC you need:
-
-The shadow MVCC jar on your classpath
-A cache configuration that ensures that related key and version caches are on the same distributed service. This is determined by suffixes to the logical cache name so the easy way is with something like:
+To use Shadow MVCC you need the shadow MVCC jar on your classpath, as well as coherence.jar version 3.7.1.
+Your cache configuration must ensure that related key and version caches are on the same distributed service. This is determined by suffixes to the logical cache name so the easy way is with something like:
 
 {{{
       <cache-name>mytestcache-*</cache-name>
@@ -21,6 +19,12 @@ You *must* use POF, and your POF config must include the MVCC POF configuration:
 .
 .
   </user-type-list>
+}}}
+
+Your storage nodes need to use the MVCC cache factory builder to ensure the transaction monitor threads are started, so on your JVM command line:
+
+{{{
+-Dtangosol.coherence.cachefactorybuilder=com.shadowmvcc.coherence.monitor.CacheFactoryBuilder
 }}}
 
 = Code =
@@ -54,14 +58,3 @@ And commit the changes:
 {{{
         transactionManager.getTransaction().commit();
 }}}
-
-    
-
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
