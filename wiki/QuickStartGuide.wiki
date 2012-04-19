@@ -45,7 +45,7 @@ Next, get your `NamedCache` instance:
         NamedCache cache = transactionManager.getCache("mytestcache");
 }}}
 
-You can do (almost) anything with this cache that you would with a normal Coherence cache. Any cache instance obtained from the same `TransactionManager` will participate in the same transaction. As we are using a `ThreadedTransactionManager`, there is a separate transaction associated with each thread, so operations in two threads on the same cache will be in separate transactions.
+You can do (almost) anything with this cache that you would with a normal Coherence cache. Any cache instance obtained from the same `TransactionManager` will participate in the same transaction. As we are using a `ThreadTransactionManager`, there is a separate transaction associated with each thread, so operations in two threads on the same cache will be in separate transactions.
 
 Now, do some work on the cache:
 
