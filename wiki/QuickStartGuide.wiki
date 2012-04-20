@@ -1,4 +1,4 @@
-#Quick Start guide
+#summary Very brief introduction on how to get started with Shadow MVCC
 
 = Configuration =
 
