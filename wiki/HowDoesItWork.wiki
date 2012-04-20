@@ -1,6 +1,5 @@
-#Link to architecture doc
+#summary Link to the architecture document
 
 = Introduction =
 
 For information on how the MVCC capability is layered on Oracle Coherence, please see http://www.sixwhits.com/shadowmist/coherence-mvcc.pdf
-
