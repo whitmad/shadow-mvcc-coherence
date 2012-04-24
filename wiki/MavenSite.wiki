@@ -1,0 +1,6 @@
+#summary Link to maven site output
+= Maven site =
+
+maven site with test results, api docs, and Cobertura coverage is at http://www.sixwhits.com/shadowmist/site/project-reports.html
+
+Currently there's no CI linked to this, so won't always be up to date with the code.
