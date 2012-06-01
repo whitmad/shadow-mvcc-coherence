@@ -2,4 +2,6 @@
 
 = Introduction =
 
-I'll be presenting on Shadow MVCC at the Oracle Coherence SIG in London on May 31st 2012. Further details to follow.
+I presented on Shadow MVCC at the Oracle Coherence SIG in London on May 31st 2012. 
+
+The presentation is here: http://www.sixwhits.com/shadowmist/ShadowMVCCSIG.odp
